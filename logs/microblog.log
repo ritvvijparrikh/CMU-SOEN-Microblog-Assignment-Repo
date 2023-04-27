@@ -1,0 +1,102 @@
+2023-04-27 22:01:18,579 ERROR: Exception on /auth/login [POST] [in /Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/flask/app.py:1454]
+Traceback (most recent call last):
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/app/auth/routes.py", line 19, in login
+    bp.logger.info(form.username)
+    ^^^^^^^^^
+AttributeError: 'Blueprint' object has no attribute 'logger'
+2023-04-27 22:01:54,841 INFO: Microblog startup [in /Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/app/__init__.py:89]
+2023-04-27 22:02:03,447 ERROR: Exception on /auth/login [POST] [in /Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/flask/app.py:1454]
+Traceback (most recent call last):
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/app/auth/routes.py", line 19, in login
+    app.logger.info(form.username)
+    ^^^
+NameError: name 'app' is not defined
+2023-04-27 22:04:23,379 INFO: Microblog startup [in /Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/app/__init__.py:89]
+2023-04-27 22:04:45,452 INFO: Microblog startup [in /Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/app/__init__.py:89]
+2023-04-27 22:05:19,485 INFO: Microblog startup [in /Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/app/__init__.py:89]
+2023-04-27 22:05:33,505 ERROR: Exception on /auth/login [POST] [in /Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/flask/app.py:1454]
+Traceback (most recent call last):
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.ProgrammingError: Error binding parameter 1: type 'StringField' is not supported
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/app/auth/routes.py", line 19, in login
+    user = User.query.filter_by(username=form.username).first()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2760, in first
+    return self.limit(1)._iter().first()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2844, in _iter
+    result = self.session.execute(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1689, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 323, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (sqlite3.ProgrammingError) Error binding parameter 1: type 'StringField' is not supported
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.about_me AS user_about_me, user.last_seen AS user_last_seen, user.token AS user_token, user.token_expiration AS user_token_expiration, user.last_message_read_time AS user_last_message_read_time 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<wtforms.fields.core.StringField object at 0x106748310>, 1, 0)]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+2023-04-27 22:06:22,092 INFO: Microblog startup [in /Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/app/__init__.py:89]

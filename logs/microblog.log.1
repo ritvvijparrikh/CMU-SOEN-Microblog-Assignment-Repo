@@ -1,0 +1,101 @@
+2023-04-20 15:05:38,678 INFO: Microblog startup [in /Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/app/__init__.py:89]
+2023-04-20 15:05:39,527 INFO: Microblog startup [in /Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/app/__init__.py:89]
+2023-04-20 15:05:46,953 INFO: Microblog startup [in /Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/app/__init__.py:89]
+2023-04-20 15:26:28,684 INFO: Microblog startup [in /Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/app/__init__.py:89]
+2023-04-20 15:26:47,679 INFO: Microblog startup [in /Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/app/__init__.py:89]
+2023-04-20 15:27:00,418 INFO: Microblog startup [in /Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/app/__init__.py:89]
+2023-04-20 15:29:42,104 INFO: Microblog startup [in /Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/app/__init__.py:89]
+2023-04-20 15:52:57,023 INFO: Microblog startup [in /Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/app/__init__.py:89]
+2023-04-20 15:53:15,800 INFO: Microblog startup [in /Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/app/__init__.py:89]
+2023-04-20 16:33:57,330 INFO: Microblog startup [in /Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/app/__init__.py:89]
+2023-04-20 17:01:12,767 INFO: Microblog startup [in /Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/app/__init__.py:89]
+2023-04-20 17:08:53,708 INFO: Microblog startup [in /Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/app/__init__.py:89]
+2023-04-27 19:50:03,867 INFO: Microblog startup [in /Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/app/__init__.py:89]
+2023-04-27 19:50:04,465 INFO: Microblog startup [in /Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/app/__init__.py:89]
+2023-04-27 19:50:09,008 INFO: Microblog startup [in /Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/app/__init__.py:89]
+2023-04-27 21:29:52,504 INFO: Microblog startup [in /Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/app/__init__.py:89]
+2023-04-27 21:32:16,942 INFO: Microblog startup [in /Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/app/__init__.py:89]
+2023-04-27 21:34:00,133 INFO: Microblog startup [in /Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/app/__init__.py:89]
+2023-04-27 21:34:06,948 ERROR: Exception on /auth/login [POST] [in /Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/flask/app.py:1454]
+Traceback (most recent call last):
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlite3.ProgrammingError: Error binding parameter 1: type 'StringField' is not supported
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/app/auth/routes.py", line 19, in login
+    user = User.query.filter_by(username=form.username).first()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2760, in first
+    return self.limit(1)._iter().first()
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/sqlalchemy/orm/query.py", line 2844, in _iter
+    result = self.session.execute(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/sqlalchemy/orm/session.py", line 1689, in execute
+    result = conn._execute_20(statement, params or {}, execution_options)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1582, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/sqlalchemy/sql/elements.py", line 323, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1451, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1813, in _execute_context
+    self._handle_dbapi_exception(
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1994, in _handle_dbapi_exception
+    util.raise_(
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/sqlalchemy/engine/base.py", line 1770, in _execute_context
+    self.dialect.do_execute(
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/sqlalchemy/engine/default.py", line 717, in do_execute
+    cursor.execute(statement, parameters)
+sqlalchemy.exc.ProgrammingError: (sqlite3.ProgrammingError) Error binding parameter 1: type 'StringField' is not supported
+[SQL: SELECT user.id AS user_id, user.username AS user_username, user.email AS user_email, user.password_hash AS user_password_hash, user.about_me AS user_about_me, user.last_seen AS user_last_seen, user.token AS user_token, user.token_expiration AS user_token_expiration, user.last_message_read_time AS user_last_message_read_time 
+FROM user 
+WHERE user.username = ?
+ LIMIT ? OFFSET ?]
+[parameters: (<wtforms.fields.core.StringField object at 0x103e8fa50>, 1, 0)]
+(Background on this error at: http://sqlalche.me/e/14/f405)
+2023-04-27 21:35:01,312 INFO: Microblog startup [in /Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/app/__init__.py:89]
+2023-04-27 21:35:05,476 ERROR: Exception on /auth/login [POST] [in /Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/flask/app.py:1454]
+Traceback (most recent call last):
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/flask/app.py", line 2070, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/flask/app.py", line 1515, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/flask/app.py", line 1513, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/venv/lib/python3.11/site-packages/flask/app.py", line 1499, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/app/auth/routes.py", line 19, in login
+    user = User.query.filter_by("ritvvijparrikh4").first()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: Query.filter_by() takes 1 positional argument but 2 were given
+2023-04-27 21:36:05,023 INFO: Microblog startup [in /Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/app/__init__.py:89]
+2023-04-27 22:00:22,869 INFO: Microblog startup [in /Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/app/__init__.py:89]
+2023-04-27 22:01:14,481 INFO: Microblog startup [in /Users/ritvij.parikh/Documents/CMU-SOEN-Microblog-Assignment-Repo/app/__init__.py:89]
